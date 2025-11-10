@@ -26,8 +26,8 @@ body {
 
 /* Image */
 .meme-container img {
-  width: 100%;
-  max-width: 600px;     /* looks great on desktop */
+  width: 250%;
+  max-width: 800px;     /* looks great on desktop */
   height: auto;
   border-radius: 14px;
   border: 3px solid rgba(255, 255, 255, 0.7);
@@ -46,7 +46,7 @@ h1 {
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 12px;
-  font-size: clamp(1.1rem, 4vw + 0.3rem, 2.4rem);
+  font-size: clamp(1.1rem, 4vw + 0.3rem, 0.5rem);
 }
 
 /* Caption: cute handwritten vibe, responsive */
@@ -64,4 +64,3 @@ p {
   h1{ letter-spacing: .2px; }
   .meme-container img{ border-width: 4px; border-radius: 10px; }
 }
-
