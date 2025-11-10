@@ -1,48 +1,66 @@
+/* Page basics */
+:root{
+  --bg:#0b0710;
+  --glow: #d9ff61;      /* greenyellow */
+  --accent:#ff6b6b;     /* sweet pink-red */
+  --text:#f8f8ff;
+}
+
+* { box-sizing: border-box; }
+
 body {
-  background-color: #0b0217; /* deep, cozy night violet */
   margin: 0;
-  font-family: 'Libre Baskerville', serif;
+  background: radial-gradient(1200px 600px at 50% -200px, #1b1227 0%, var(--bg) 60%);
+  color: var(--text);
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.4;
+  padding: 16px;
 }
 
-h1 {
-  text-transform: uppercase;
-  color: #E6FF62; /* soft glowing green-yellow */
+/* Centered, fluid container */
+.meme-container{
+  width: min(900px, 92vw);
+  margin: 24px auto 48px;
   text-align: center;
-  font-size: 3.2em;
-  margin-top: 25px;
-  text-shadow: 0px 0px 18px #d9ff66, 0px 0px 35px #9aff2c; /* gentle glow */
 }
 
-p {
-  color: #FF9AA2; /* pastel romantic pink */
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.8em;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  text-shadow: 0px 0px 8px #ff8faa; /* soft glowing warmth */
-}
-
-img {
+/* Image */
+.meme-container img{
+  display: block;
   width: 100%;
-  border-radius: 14px; /* softer corners */
-  border: 4px solid #ffffffbb; /* elegant soft white border */
-  box-shadow: 0px 0px 28px rgba(255, 255, 255, 0.35); /* dreamy award-winning love effect */
+  height: auto;
+  border: 6px solid #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.55);
+  margin: 0 auto 18px;
 }
 
-.meme-container {
-  width: 50%;
-  margin: auto; /* perfect centering */
-  padding-top: 30px;
-  text-align: center;
+/* Heading: neon, responsive */
+h1{
+  text-transform: uppercase;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  letter-spacing: .5px;
+  margin: 0 0 12px;
+  font-size: clamp(1.6rem, 5vw + .3rem, 3.2rem);
+  color: var(--glow);
+  text-shadow:
+    0 0 10px rgba(217,255,97,.75),
+    0 0 25px rgba(217,255,97,.55);
 }
 
-h1 {
-  animation: float 3s ease-in-out infinite;
+/* Caption: cute handwritten vibe, responsive */
+p{
+  font-family: "Caveat", "Courier New", monospace;
+  font-size: clamp(1.1rem, 2.8vw + .2rem, 2rem);
+  margin: 8px 0 0;
+  color: var(--accent);
+  text-shadow: 0 0 6px rgba(255,107,107,.4);
 }
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
+/* Small phones: soften sizes & spacing a touch */
+@media (max-width: 380px){
+  .meme-container{ margin: 12px auto 32px; }
+  h1{ letter-spacing: .2px; }
+  .meme-container img{ border-width: 4px; border-radius: 10px; }
 }
