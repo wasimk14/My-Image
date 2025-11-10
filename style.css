@@ -25,37 +25,37 @@ body {
 }
 
 /* Image */
-.meme-container img{
-  display: block;
+.meme-container img {
   width: 100%;
+  max-width: 600px;     /* looks great on desktop */
   height: auto;
-  border: 6px solid #fff;
   border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.55);
-  margin: 0 auto 18px;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 0 25px rgba(0,0,0,0.6),
+    0 0 120px rgba(0,0,0,0.8) inset;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 /* Heading: neon, responsive */
-h1{
+h1 {
+  color: #f6f4ef;
   text-transform: uppercase;
   font-family: "Libre Baskerville", serif;
-  font-weight: 700;
-  letter-spacing: .5px;
-  margin: 0 0 12px;
-  font-size: clamp(1.6rem, 5vw + .3rem, 3.2rem);
-  color: var(--glow);
-  text-shadow:
-    0 0 10px rgba(217,255,97,.75),
-    0 0 25px rgba(217,255,97,.55);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  font-size: clamp(1.1rem, 4vw + 0.3rem, 2.4rem);
 }
 
 /* Caption: cute handwritten vibe, responsive */
-p{
-  font-family: "Caveat", "Courier New", monospace;
-  font-size: clamp(1.1rem, 2.8vw + .2rem, 2rem);
-  margin: 8px 0 0;
-  color: var(--accent);
-  text-shadow: 0 0 6px rgba(255,107,107,.4);
+p {
+  font-family: "Caveat", cursive;
+  color: #ff9da2;
+  font-size: clamp(1rem, 2.6vw + 0.3rem, 1.6rem);
+  line-height: 1.45;
+  margin-top: 10px;
 }
 
 /* Small phones: soften sizes & spacing a touch */
@@ -64,3 +64,4 @@ p{
   h1{ letter-spacing: .2px; }
   .meme-container img{ border-width: 4px; border-radius: 10px; }
 }
+
